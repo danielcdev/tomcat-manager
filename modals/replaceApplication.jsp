@@ -9,9 +9,9 @@
 
 				<div class="modal-body">
 					<div class="custom-file">
-						<input type="file" class="custom-file-input" id="war" name="war">
-						<label class="custom-file-label" id="fileName"
-							for="validatedCustomFile">Select WAR file</label>
+						<input type="file" class="custom-file-input" id="war"> <label
+							class="custom-file-label" id="fileName">Select
+							WAR file</label>
 					</div>
 				</div>
 

@@ -10,8 +10,7 @@
 				<div class="modal-body">
 					<div class="custom-file">
 						<input type="file" class="custom-file-input" id="war"> <label
-							class="custom-file-label" id="fileName">Select
-							WAR file</label>
+							class="custom-file-label" id="fileName">Select WAR file</label>
 					</div>
 				</div>
 
@@ -40,19 +39,21 @@
 
 		var file = $('input:file')[0].files[0];
 
+		currentReplace.data()[1] = "<div class='loader'></div>";
+		currentReplace.data(currentReplace.data());
+		$("#replaceApplicationModal").modal('hide');
+
 		$.ajax({
 			type : "GET",
-			url : "/manager/text/undeploy?path=" + currentReplace[0]
+			url : "/manager/text/undeploy?path=" + currentReplace.data()[0]
 		}).done(function(data) {
 			$.ajax({
 				type : "PUT",
-				url : "/manager/text/deploy?path=" + currentReplace[0],
+				url : "/manager/text/deploy?path=" + currentReplace.data()[0],
 				data : file,
 				contentType : false,
 				processData : false,
 				cache : false
-			}).done(function(data) {
-				$("#replaceApplicationModal").modal('hide');
 			}).always(function(data) {
 				$("#upload").prop("disabled", false);
 				fetchListData($("#apps"), "/manager/text/list");

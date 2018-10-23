@@ -57,7 +57,7 @@
 						});
 
 		$('#apps tbody').on('click', 'button', function() {
-			currentReplace = apps.row($(this).parents('tr')).data();
+			currentReplace = apps.row($(this).parents('tr'));
 
 			$("#replaceApplicationModal").modal('show');
 		});

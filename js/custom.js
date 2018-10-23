@@ -18,7 +18,7 @@ function addDataToDataTable(thisDataTable, thisData) {
 }
 
 function parseListData(thisDataTable, thisData) {
-	thisData = thisData.split("\r\n");
+	thisData = thisData.split("\\r?\\n");
 
 	for (var i = 0; i < thisData.length; i++) {
 		var toTable = thisData[i].split(":");

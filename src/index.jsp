@@ -44,7 +44,7 @@
 							columnDefs : [ {
 								targets : 3,
 								data : null,
-								defaultContent : '<button class="btn btn-sm btn-outline-primary">Replace</button><button class="btn btn-sm btn-outline-danger">Remove</button>'
+								defaultContent : '<button class="btn btn-sm btn-outline-primary">Replace</button>'
 							} ],
 							columns : [ {
 								data : 3

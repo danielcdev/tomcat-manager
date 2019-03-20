@@ -27,7 +27,7 @@
 </div>
 
 <script type="text/javascript">
-	$('#war').change(function() {
+	$("#war").change(function() {
 		var name = $(this).val().substr($(this).val().lastIndexOf('\\') + 1);
 
 		$('#fileName').html(name);
@@ -37,7 +37,7 @@
 		e.preventDefault();
 		$("#upload").prop("disabled", true);
 
-		var file = $('input:file')[0].files[0];
+		var file = $("#war")[0].files[0];
 
 		currentReplace.data()[1] = "<div class='loader'></div>";
 		currentReplace.data(currentReplace.data());

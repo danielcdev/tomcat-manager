@@ -10,7 +10,8 @@
 				<div class="card">
 					<div class="card-header">Applications</div>
 					<div class="card-body">
-						<button class="btn btn-outline-success">New Application</button>
+						<button class="btn btn-outline-success" data-toggle="modal"
+							data-target="#newApplicationModal">New Application</button>
 						<table id="apps" class="table table-striped table-bordered"
 							style="width: 100%;">
 							<thead>
@@ -35,6 +36,7 @@
 	<jsp:include page='includes/footer.jsp' />
 
 	<jsp:include page='modals/replaceApplication.jsp' />
+	<jsp:include page='modals/newApplication.jsp' />
 
 	<script type="text/javascript">
 		var currentReplace;

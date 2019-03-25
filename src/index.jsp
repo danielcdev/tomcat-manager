@@ -55,8 +55,17 @@
 							}, {
 								data : 2
 							} ],
-							order : [ [ 1, "desc" ], [ 2, "desc" ] ]
+							order : [ [ 1, "desc" ], [ 2, "desc" ],
+									[ 0, "asc" ] ]
 						});
+
+		function refreshApplicationList() {
+			fetchListData($("#apps"), "/manager/text/list");
+
+			setTimeout(function() {
+				refreshApplicationList();
+			}, 20000);
+		}
 
 		$('#apps tbody').on('click', 'button', function() {
 			currentReplace = apps.row($(this).parents('tr'));
@@ -65,7 +74,7 @@
 		});
 
 		$(document).ready(function() {
-			fetchListData($("#apps"), "/manager/text/list");
+			refreshApplicationList();
 		});
 	</script>
 </body>
